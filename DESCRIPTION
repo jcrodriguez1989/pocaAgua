@@ -1,0 +1,26 @@
+Package: pocaAgua
+Type: Package
+Title: Proof of Concept of Artificial intelligence (POCA) with H2O (AGUA)
+Version: 0.0.1
+Authors@R: c(
+    person(given = "Juan Cruz", family = "Rodriguez", 
+        role = c("aut", "cre"), email = "jcrodriguez@unc.edu.ar")
+    )
+Maintainer: Juan Cruz Rodriguez <jcrodriguez@unc.edu.ar>
+Description: Easily fit various prediction models for a dataset. Get the 
+    metrics of the best-calculated model, as well as a prediction test 
+    interface through a web page.
+License: MIT + file LICENSE
+URL: https://github.com/jcrodriguez1989/pocaAgua/
+BugReports: https://github.com/jcrodriguez1989/pocaAgua/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Imports:
+    dplyr,
+    h2o,
+    purrr,
+    readr,
+    shiny,
+    shinythemes,
+    tools
