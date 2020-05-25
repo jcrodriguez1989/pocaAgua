@@ -132,9 +132,9 @@ build_server <- function(input_data, response_variable, predictors, model_file) 
 
 get_metrics <- function(model) {
   # Get model's summary info as text.
-  metrics <- model@model$training_metrics@metrics[
+  metrics <- unlist(model@model$training_metrics@metrics[
     c("MSE", "RMSE", "mae", "rmsle", "mean_residual_deviance")
-  ]
+  ])
   paste0(
     "Model metrics:\n",
     paste(names(metrics), round(unlist(metrics), 2), sep = ": ", collapse = "\n")
