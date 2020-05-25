@@ -3,6 +3,7 @@
 export(poca_agua)
 import(shiny)
 importFrom(dplyr,`%>%`)
+importFrom(dplyr,mutate_if)
 importFrom(dplyr,pull)
 importFrom(dplyr,select)
 importFrom(h2o,as.h2o)

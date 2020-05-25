@@ -1,3 +1,4 @@
+#' @importFrom dplyr mutate_if
 #' @importFrom h2o h2o.init as.h2o h2o.automl h2o.saveMojo h2o.import_mojo
 #' @importFrom tools file_ext
 #'
@@ -5,6 +6,8 @@ train_model <- function(input_data, response_variable, predictors,
                         max_runtime_secs, poc_dir, ...) {
   # Start the H2O local server. We should inform the user that should close it.
   h2o.init()
+  # Convert character variables to factor.
+  input_data <- input_data %>% mutate_if(is.character, as.factor)
   # Send data to the server.
   h2o_data <- as.h2o(input_data[, c(response_variable, predictors)])
   # Train the models.

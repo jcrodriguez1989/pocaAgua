@@ -36,7 +36,7 @@ easily get an AI proof of concept.
 
 To install it, run the following from an R console:
 
-``` r
+```{r, installation, eval = FALSE}
 if (!require("remotes")) {
   install.packages("remotes")
 }
@@ -47,7 +47,7 @@ remotes::install_github("jcrodriguez1989/pocaAgua", dependencies = TRUE)
 
 Get a predictions proof of concept for different datasets:
 
-```{r example, eval = FALSE}
+```{r, example, eval = FALSE}
 library("pocaAgua")
 
 ## Use it to classify the "Species" from the iris dataset.
@@ -62,6 +62,6 @@ poca_agua("my_table.csv", "name_of_my_interest_variable")
 
 Example app for the `iris` table:
 
-```{r example_image, echo = FALSE}
+```{r, example_image, echo = FALSE}
 knitr::include_graphics("man/figures/README-example.png")
 ```
