@@ -103,9 +103,14 @@ page.
 }
 \examples{
 \dontrun{
+## Use it to classify the "Species" from the iris dataset.
 poca_agua(iris, "Species")
 
-poca_agua("my_iris_file.csv", "Species")
+## Use it to regress the "mpg" from the mtcars dataset.
+poca_agua(mtcars, "mpg")
+
+## If we have the table as a csv file we could do:
+poca_agua("my_table.csv", "name_of_my_interest_variable")
 }
 
 }
